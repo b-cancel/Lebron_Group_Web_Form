@@ -1,0 +1,592 @@
+<script>
+/*! modernizr 3.3.1 (Custom Build) | MIT *
+ * https://modernizr.com/download/?-placeholder-setclasses-cssclassprefix:mod_ !*/
+!function(e,n,a){function s(e,n){return typeof e===n}function o(){var e,n,a,o,t,i,c;for(var f in r)if(r.hasOwnProperty(f)){if(e=[],n=r[f],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(a=0;a<n.options.aliases.length;a++)e.push(n.options.aliases[a].toLowerCase());for(o=s(n.fn,"function")?n.fn():n.fn,t=0;t<e.length;t++)i=e[t],c=i.split("."),1===c.length?Modernizr[c[0]]=o:(!Modernizr[c[0]]||Modernizr[c[0]]instanceof Boolean||(Modernizr[c[0]]=new Boolean(Modernizr[c[0]])),Modernizr[c[0]][c[1]]=o),l.push((o?"":"no-")+c.join("-"))}}function t(e){var n=f.className,a=Modernizr._config.classPrefix||"";if(u&&(n=n.baseVal),Modernizr._config.enableJSClass){var s=new RegExp("(^|\\s)"+a+"no-js(\\s|$)");n=n.replace(s,"$1"+a+"js$2")}Modernizr._config.enableClasses&&(n+=" "+a+e.join(" "+a),u?f.className.baseVal=n:f.className=n)}function i(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):u?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}var l=[],r=[],c={_version:"3.3.1",_config:{classPrefix:"mod_",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var a=this;setTimeout(function(){n(a[e])},0)},addTest:function(e,n,a){r.push({name:e,fn:n,options:a})},addAsyncTest:function(e){r.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=c,Modernizr=new Modernizr;var f=n.documentElement,u="svg"===f.nodeName.toLowerCase();Modernizr.addTest("placeholder","placeholder"in i("input")&&"placeholder"in i("textarea")),o(),t(l),delete c.addTest,delete c.addAsyncTest;for(var p=0;p<Modernizr._q.length;p++)Modernizr._q[p]();e.Modernizr=Modernizr}(window,document);
+</script>
+
+<style>
+/*HIDE the Simfatic Advertisement*/
+
+.sfm_cr_box{
+display:none;
+}
+
+.sfm_form_label{
+display: none;
+}
+
+/*have the outer div adjust to the content inside of it... and the div its in...*/
+
+#Boundary_Survey_Request_outer_div{
+background-color:red;
+
+width:98% !important;
+max-width: 750px;
+
+height:auto !important;
+margin:0 auto !important;
+top: 0 !important; left: 0 !important; bottom: 0 !important; right: 0 !important;
+background-color:transparent !important;
+z-index:1 !important;
+}
+
+#Boundary_Survey_Request_inner_div{
+z-index:2 !important;
+}
+
+/*adjust all MAIN sections*/
+
+#Boundary_Survey_Request_inner_div > div{
+position:static !important;
+height:auto !important;
+width:100% !important;
+top:0px !important; bottom:0px !important; left:0px !important; right0px !important;
+z-index:3 !important;
+}
+
+/*Height Exceptions for Extras...*/
+
+#Boundary_Survey_Request_inner_div > div > #upload_container{
+height: 200px !important;
+width: 98% !important;
+}
+
+#Boundary_Survey_Request_inner_div > div > #LegalDescription_container, 
+#Boundary_Survey_Request_inner_div > div > #Comments_container{
+height: 100px !important;
+margin-bottom: 10px !important;
+}
+
+#LegalDescription, #Comments{
+height:100% !important;
+width:100% !important;
+}
+
+/*adjust all containers*/
+
+#Boundary_Survey_Request_inner_div > div > div{
+position:static !important;
+padding-top:5px;
+padding-bottom:5px;
+top:0px !important; bottom:0px !important; left:0px !important; right0px !important;
+height:auto !important;
+width:100% !important;
+z-index:4 !important;
+
+text-align:center !important;
+}
+
+/*adjust all things INSIDE containers*/
+
+#Boundary_Survey_Request_inner_div > div > div > div:not(.sfm_auto_hide_text){
+position:static !important;
+top:0px !important; bottom:0px !important; left:0px !important; right0px !important;
+width:100% !important;
+z-index:5 !important;
+}
+
+/*make all horizontal line fill the div they are in*/
+
+#Boundary_Survey_Request #horiz_line, #Boundary_Survey_Request #horiz_line1, #Boundary_Survey_Request #horiz_line3, #Boundary_Survey_Request #horiz_line4, #Boundary_Survey_Request #horiz_line5, #Boundary_Survey_Request #horiz_line6, #Boundary_Survey_Request #horiz_line7, #Boundary_Survey_Request #horiz_line8, #Boundary_Survey_Request #horiz_line9, #Boundary_Survey_Request #horiz_line10, #Boundary_Survey_Request #horiz_line11{
+position:static !important;
+width:100% !important;
+padding-bottom:0px !important;
+top:0px; bottom:0px; left:0px; right0px;
+z-index:5  !important;
+}
+
+/*Submit button settings*/
+
+#Submit{
+width:200px !important;
+text-align:center !important;
+font-size: 18px !important;
+background-color:black !important;
+color:white !important;
+border-color:grey !important;
+}
+
+.Submit_container{
+text-align:center !important;
+}
+
+/*adjust all input tags*/
+
+#Boundary_Survey_Request input, #Boundary_Survey_Request select, #Boundary_Survey_Request textarea{
+float: none !important;
+
+margin:0 auto !important;
+top: 0 !important; left: 0 !important; bottom: 0 !important; right: 0 !important;
+
+font-size: 16px !important; /*this is supposed to stop mobile phone autozooming*/
+}
+
+#Boundary_Survey_Request input:not(#Submit), #Boundary_Survey_Request select, #Boundary_Survey_Request textarea{
+width:98% !important;
+background-color:white;
+}
+
+#label1, #label2, #label3, #label4, #label5, #label6, #label7, #label8, #label9{
+text-align:center !important;
+}
+
+#Boundary_Survey_Request label{
+position:static !important;
+display: none;
+}
+
+#DateNeeded:before{
+content: "*Date Needed: ";
+}
+
+#ClosingDate:before{
+content: "Closing Date: ";
+}
+
+input[type="date"]:before {
+color: #000;
+margin-right: 0.5em;
+}
+
+input[type="date"]:focus:before, input[type="date"]:valid:before {
+content: "";
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #000;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #000;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #000;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #000;
+}
+
+/*Submit container switch with decoy css*/
+
+#Submit_container{
+	display: none;
+}
+
+#Submit_decoy{
+
+}
+</style>
+
+<script src='http://lebrongroup.com/forms/Boundary_Survey_Request/scripts/jquery-1.7.2.min.js' type='text/javascript'></script>
+<script src='http://lebrongroup.com/forms/Boundary_Survey_Request/scripts/jquery.sim.utils.js' type='text/javascript'></script>
+<script src='http://lebrongroup.com/forms/Boundary_Survey_Request/scripts/globalize.js' type='text/javascript'></script>
+<script src='http://lebrongroup.com/forms/Boundary_Survey_Request/scripts/jquery.sim.FormCalc.js' type='text/javascript'></script>
+<link rel='stylesheet' type='text/css' href='http://lebrongroup.com/forms/Boundary_Survey_Request/style/Boundary_Survey_Request.css'/>
+<form id='Boundary_Survey_Request' class='sfm_form' enctype='multipart/form-data' method='post' action='http://lebrongroup.com/forms/Boundary_Survey_Request/Boundary_Survey_Request.php' accept-charset='UTF-8'>
+   <div id='Boundary_Survey_Request_errorloc' class='error_strings' style='text-align:left'></div>
+   <div id='Boundary_Survey_Request_outer_div' class='form_outer_div' style='height:2865px'>
+      <div style='position:relative' id='Boundary_Survey_Request_inner_div'>
+         <input type='hidden' name='sfm_form_submitted' value='yes'/>
+         <div id='formsection_0_0'>
+            <div id='label9_container'>
+               <div id='label9'>ONLY fields with * are Required</div>
+            </div>
+            <div id='horiz_line7'></div>
+         </div>
+         <div id='formsection_0_152'>
+            <div id='label26_container' class='sfm_form_label'>
+               <label id='label26' for='Name'>*Your Name</label>
+            </div>
+            <div id='Name_container'>
+               <input type='text' name='Name' id='Name' value='*Your Name' size='20' class='sfm_textbox' onblur="checkReqs()" />
+            </div>
+            <div id='label7_container'>
+               <div id='label7'>The Survey will be made in Your Name unless otherwise specified</div>
+            </div>
+            <div id='label25_container' class='sfm_form_label'>
+               <label id='label25' for='Email'>*Your Email</label>
+            </div>
+            <div id='Email_container'>
+               <input type='text' name='Email' id='Email' value='*Your Email' size='20' class='sfm_textbox' onblur="checkReqs()" />
+            </div>
+            <div id='label24_container' class='sfm_form_label'>
+               <label id='label24' for='Phone'>Your Phone #</label>
+            </div>
+            <div id='Phone_container'>
+               <input type='text' name='Phone' id='Phone' value='Your Phone #' size='20' class='sfm_textbox'/>
+            </div>
+            <div id='label23_container' class='sfm_form_label'>
+               <label id='label23' for='NameOfTitleCompany'>*Name of Title Company</label>
+            </div>
+            <div id='NameOfTitleCompany_container'>
+               <input type='text' name='NameOfTitleCompany' id='NameOfTitleCompany' value='*Name of Title Company' size='20' class='sfm_textbox' onblur="checkReqs()" />
+            </div>
+            <div id='label22_container' class='sfm_form_label'>
+               <label id='label22' for='AddressOfTitleCompany'>*Address of Title Company</label>
+            </div>
+            <div id='AddressOfTitleCompany_container'>
+               <input type='text' name='AddressOfTitleCompany' id='AddressOfTitleCompany' value='*Address of Title Company' size='20' class='sfm_textbox' onblur="checkReqs()" />
+            </div>
+         </div>
+         <div id='formsection_0_568'>
+            <div id='horiz_line9'></div>
+            <div id='label5_container'>
+               <div id='label5'>Provide the Address of the Property to be Surveyed</div>
+            </div>
+            <div id='label18_container' class='sfm_form_label'>
+               <label id='label18' for='Address'>*Address</label>
+            </div>
+            <div id='Address_container'>
+               <input type='text' name='Address' id='Address' value='*Address' size='20' class='sfm_textbox' onblur="checkReqs()" />
+            </div>
+            <div id='label17_container' class='sfm_form_label'>
+               <label id='label17' for='City'>City | State | Zip</label>
+            </div>
+            <div id='City_container'>
+               <input type='text' name='City' id='City' value='*City | State | Zip' size='20' class='sfm_textbox' onblur="checkReqs()" />
+            </div>
+            <div id='label16_container' class='sfm_form_label'>
+               <label id='label16' for='ParcelID'>Parcel ID (required if house number is N/A)</label>
+            </div>
+            <div id='ParcelID_container'>
+               <input type='text' name='ParcelID' id='ParcelID' value='Parcel ID (required if house number is N/A)' size='20' class='sfm_textbox'/>
+            </div>
+            <div id='label15_container' class='sfm_form_label'>
+               <label id='label15' for='AccessCode'>Access Code For The Property</label>
+            </div>
+            <div id='AccessCode_container'>
+               <input type='text' name='AccessCode' id='AccessCode' value='Access Code For The Property' size='20' class='sfm_textbox'/>
+            </div>
+            <div id='label19_container' class='sfm_form_label'>
+               <label id='label19' for='LegalDescription'>Legal Description</label>
+            </div>
+            <div id='LegalDescription_container'><textarea name='LegalDescription' id='LegalDescription' class='sfm_textarea'>LEGAL DESCRIPTION: Lot | Block | Plat/Map Book | Pages | Subdivision | etc.</textarea></div>
+            <div id='label20_container' class='sfm_form_label'>
+               <label id='label20' for='ListingAgent'>Listing Agent: &quot;Contact Info.&quot;</label>
+            </div>
+            <div id='ListingAgent_container'>
+               <input type='text' name='ListingAgent' id='ListingAgent' value='Listing Agent: &quot;Contact Info.&quot;' size='20' class='sfm_textbox'/>
+            </div>
+            <div id='horiz_line6'></div>
+         </div>
+         <div id='formsection_0_1750'></div>
+         <div id='formsection_0_1752'>
+            <div id='label14_container' class='sfm_form_label'>
+               <label id='label14' for='DateNeeded'>*Date Needed</label>
+            </div>
+            <div id='DateNeeded_container'>
+               <input type='text' name='DateNeeded' id='DateNeeded' value='*Date Needed' size='20' class='sfm_textbox'/>
+            </div>
+            <div id='label13_container' class='sfm_form_label'>
+               <label id='label13' for='ClosingDate'>Closing Date</label>
+            </div>
+            <div id='ClosingDate_container'>
+               <input type='text' name='ClosingDate' id='ClosingDate' value='Closing Date' size='20' class='sfm_textbox'/>
+            </div>
+            <div id='horiz_line5'></div>
+         </div>
+         <div id='formsection_0_1896'>
+            <div id='label2_container'>
+               <div id='label2'>The Certifications EXACTLY as Desired on the Survey</div>
+            </div>
+            <div id='label_container' class='sfm_form_label'>
+               <label id='label' for='NameOfBuyer'>Buyer(s)</label>
+            </div>
+            <div id='NameOfBuyer_container'>
+               <input type='text' name='NameOfBuyer' id='NameOfBuyer' value='Buyer(s)' size='20' class='sfm_textbox'/>
+            </div>
+            <div id='label10_container' class='sfm_form_label'>
+               <label id='label10' for='NameOfLender'>Lender</label>
+            </div>
+            <div id='NameOfLender_container'>
+               <input type='text' name='NameOfLender' id='NameOfLender' value='Lender' size='20' class='sfm_textbox'/>
+            </div>
+            <div id='label11_container' class='sfm_form_label'>
+               <label id='label11' for='NameOfTitleCompany'>Title Co./Attorney</label>
+            </div>
+            <div id='NameOfTitleAtty_container'>
+               <input type='text' name='NameOfTitleAtty' id='NameOfTitleAtty' value='Title Co./ Attorney' size='20' class='sfm_textbox'/>
+            </div>
+            <div id='label12_container' class='sfm_form_label'>
+               <label id='label12' for='NameOfUnderWriter'>Title Insurance/Underwriter</label>
+            </div>
+            <div id='NameOfUnderWriter_container'>
+               <input type='text' name='NameOfUnderWriter' id='NameOfUnderWriter' value='Title Insurance/Underwriter' size='20' class='sfm_textbox'/>
+            </div>
+            <div id='horiz_line4'></div>
+         </div>
+         <div id='formsection_0_2232'>
+            <div id='AddExtras_container'>
+               <select name='AddExtras' id='AddExtras' size='1'>
+                  <option value='selected'>Add Extras?</option>
+                  <option value='Question or Comments'>Question or Comments</option>
+                  <option value='Attachments'>Attachments</option>
+               </select>
+            </div>
+         </div>
+         <div id='formsection_0_2280'></div>
+         <div id='formsection_0_2281'>
+            <div id='Comments_container'><textarea name='Comments' id='Comments' cols='50' rows='8' class='sfm_textarea'></textarea></div>
+         </div>
+         <div id='formsection_0_2424'>
+            <div id='FileUpload_container'>
+               <input type='file' name='FileUpload' id='FileUpload'/>
+            </div>
+         </div>
+         <div id='formsection_0_2480'>
+            <div id='horiz_line8'></div>
+            <div id='label4_container'>
+               <div id='label4'>Any return visit(s) to the property due to access Issues will incur in an Additional $50.00 Charge</div>
+            </div>
+            <div id='label8_container'>
+               <div id='label8'>Every order submitted After 3:00 pm will be processed the Following Business Day</div>
+            </div>
+            <div id='label1_container'>
+               <div id='label1'>You will be sent a Confirmation Email at the End of the Day.<br />If you Do Not receive it please Call our office</div>
+            </div>
+            <div id='Submit_decoy' class='Submit_container'>
+               <input type='button' name='Submit Decoy' value='Submit' onclick="redIfNoReq()" id='Submit'/> 
+            </div>
+            <div id='Submit_container' class='loading_div Submit_container'>
+               <input type='submit' name='Submit' value='Submit' id='Submit' disabled="true" />
+            </div>
+         </div>
+      </div>
+   </div>
+</form>
+<script type='text/javascript'>
+// <![CDATA[
+$(function()
+{
+   sfm_show_loading_on_formsubmit('Boundary_Survey_Request','Submit');
+});
+$('#formsection_0_2281').dispCondition('is_selected(AddExtras,"Question or Comments")','Boundary_Survey_Request');
+$('#formsection_0_2424').dispCondition('is_selected(AddExtras,"Attachments")','Boundary_Survey_Request');
+
+// ]]>
+</script>
+
+<script>
+
+   //set type of date for BOTH date Pickers----------
+
+   document.getElementById("DateNeeded").setAttribute("type","date");
+   document.getElementById("ClosingDate").setAttribute("type","date");
+
+
+   //turn off autocomplete for All Main Sections---------
+
+   
+   var mainSections = document.getElementById("Boundary_Survey_Request_inner_div").getElementsByTagName("input");
+   var mainSectionsCount = mainSections.length;
+
+   for (i = 0; i < mainSectionsCount; i++) { 
+      mainSections[i].setAttribute("autocomplete","off");
+   }
+   
+   //turn on autocomplete for "First Section" and "Certifications"----------
+
+   //---(AKA) the div parent of this div 'Name_container' AND this one the div parent of this div 'NameOfBuyer_container'
+   //get "address" to those sections by (getting ONE of the inputs by ID -> getting name of its parents -> grabbing all that parents children -> out of those only grabbing inputs)
+
+   var section1 = document.getElementById("Name_container").parentNode.getElementsByTagName("input"); //.children missing second to last
+   var section2 = document.getElementById("NameOfBuyer_container").parentNode.getElementsByTagName("input"); //.children missing second to last
+
+   //actually modify values in section 1
+
+   var section1Count = section1.length;
+
+   for (i = 0; i < section1Count; i++) { 
+      section1[i].setAttribute("autocomplete","on");
+   }
+
+   //actually modify values in section 2
+
+   var section2Count = section2.length;
+
+   for (i = 0; i < section2Count; i++) { 
+      section2[i].setAttribute("autocomplete","on");
+   }
+
+Modernizr.on('placeholder', function( result ) {
+  if (!result) {
+   
+   //(1) SET INPUT LABELS TO APPEAR
+
+   //make all labels in the form... their parents make them display block----------
+
+   var allLabels = document.getElementsByClassName("sfm_form_label");
+
+   var countOfLabels = allLabels.length;
+
+   for (i = 0; i < countOfLabels; i++) { 
+
+         allLabels[i].style.display = "block";
+   }
+
+   //now make the label in the form display none
+
+   var allLabels2 = document.getElementById("Boundary_Survey_Request_inner_div").getElementsByTagName("label");
+
+   var countLabels2 = allLabels2.length;
+
+   for( i=0; i < countLabels2; i++){
+      allLabels2[i].style.display = "block";
+   }
+
+   //(2) REMOVE VALUE IN ALL INPUTS
+
+      //for inputs
+
+      var allInputs = document.getElementById("Boundary_Survey_Request_inner_div").getElementsByTagName("input");
+
+      var countOfInputs = allInputs.length;
+
+      for (i = 0; i < countOfInputs; i++) { 
+         if(allInputs[i].id != 'Submit')
+         {
+            //erase value
+            allInputs[i].setAttribute("value", "");
+         }
+      }
+
+      //for textareas
+
+      var allTextAreas = document.getElementById("Boundary_Survey_Request_inner_div").getElementsByTagName("textarea");
+
+      var countOfTextAreas = allTextAreas.length;
+
+      for (i = 0; i < countOfTextAreas; i++) { 
+         //erase currrent inner html
+         allTextAreas[i].innerHTML="";
+      }
+
+      alert("This Browser Doesn't Support PlaceHolders, So the Form Might Look Strange");
+
+  } 
+  else {
+
+      //add placeholders and remove value from input(s)----------
+
+      var allInputs = document.getElementById("Boundary_Survey_Request_inner_div").getElementsByTagName("input");
+
+      var countOfInputs = allInputs.length;
+
+      for (i = 0; i < countOfInputs; i++) { 
+
+
+         if(allInputs[i].id != 'Submit')
+         {
+            //add place holder attribute
+            var placeholderValue = allInputs[i].getAttribute("value");
+
+            //set place holder attribut = to input value
+            allInputs[i].setAttribute("placeholder", placeholderValue);
+
+            //erase value
+            allInputs[i].setAttribute("value", "");
+         }
+      }
+
+      //set placeholder text for textArea(s)----------
+
+      var allTextAreas = document.getElementById("Boundary_Survey_Request_inner_div").getElementsByTagName("textarea");
+
+      var countOfTextAreas = allTextAreas.length;
+
+      for (i = 0; i < countOfTextAreas; i++) { 
+
+         //save innerHTML
+         var placeHolderValue = allTextAreas[i].innerHTML;
+
+         //erase currrent inner html
+         allTextAreas[i].innerHTML="";
+
+         //set placeholder text
+         allTextAreas[i].setAttribute("placeholder",placeHolderValue);
+      }
+  }
+});
+
+</script>
+
+<script type="text/javascript">
+	
+function redIfNoReq(){
+	var allInputs = document.getElementById("Boundary_Survey_Request_inner_div").getElementsByTagName("input");
+
+	var firstFocus ="";
+	for (i = 0; i < allInputs.length; i++) { 
+
+		var temp = allInputs[i];
+
+		 if(temp.name == 'Name' || temp.name=='Email' || temp.name=='NameOfTitleCompany' || temp.name=='AddressOfTitleCompany' || temp.name=='Address' || temp.name=='City'){
+
+		 	if(temp.value==""){
+		 		temp.style.background="red";
+
+		 		if (firstFocus=="") {
+		 			firstFocus=temp;
+		 		}
+		 	}
+		 }
+	}
+
+	//focus on first foucs
+	firstFocus.focus();
+
+
+	//alert user to fill out red portion
+	alert("Fill out the fields in 'Red', in order to Submit the Form");
+}
+
+function checkReqs(){
+	/*'name' attribute from input "Name | Email | NameOfTitleCompany | AddressOfTitleCompany | Address | City"*/
+
+	var allInputs = document.getElementById("Boundary_Survey_Request_inner_div").getElementsByTagName("input");
+
+	var reqsFilledQ=true;
+	for (i = 0; i < allInputs.length; i++) { 
+
+		var temp = allInputs[i];
+
+		 if(temp.name == 'Name' || temp.name=='Email' || temp.name=='NameOfTitleCompany' || temp.name=='AddressOfTitleCompany' || temp.name=='Address' || temp.name=='City'){
+
+		 	if(temp.value==""){
+		 		reqsFilledQ=false;
+		 	}
+		 	else
+		 	{
+		 		temp.style.background="white";
+		 	}
+		 }
+	}
+
+	//alert("checking Requirements");
+
+	if(reqsFilledQ)
+	{
+		//alert("good to go");
+
+		//prepare
+		var submitDecoy = document.getElementById("Submit_decoy");
+		var submitReal = document.getElementById("Submit_container");
+
+		//make the decoy disapear andthe real one appear
+		submitDecoy.style.display="none";
+		submitReal.style.display="block";
+		submitReal.getElementsByTagName("input")[0].disabled=false;
+
+	}
+	else
+	{
+		//alert("not yet keep filling things out")
+
+		//make all required fields red
+
+		//focus on the first required field
+	}
+}
+
+</script>

@@ -1,0 +1,354 @@
+<!--
+Programmer: Bryan Cancel
+Updated: 10-27-16
+
+Task:
+*This chunk of CSS and these Script where built to work on top of a form created by a program called Simfatic Forms
+It applies a Fluid Layout for the Form that works on every browser and for every mobile device, and looks good
+*the html is created by Simfatic forms
+*the rest of the website is managed and created by Weebly
+*this portion of code along with the form simfatic form creates goes within the custom code tags in weebly
+NOTE: the client wanted to be able to edit the form(from the Simfatic form UI) and then simply copy and paste the formatting that this code applies and that is why a great level of seemingly unecesary javascript is used
+
+---------Programmer Notes----------
+*add default value again for textarea... -_-
+
+//CURRENTLY DONE in script
+*****For ALL Browsers
+1. use type="date" inside of input for date picker... (will display as regular input in unsupported browsers)
+2. add autocomplete to (1st section) and (certifications)
+3. turn it off for (all other sections)
+*****For Old Browsers that dont support placeholder
+1. display labels on top of input fields
+2. clear value attribute from input field (simfactic automatically adds this in for some reason)
+*****For New Browsers
+1. add place holder with value equivalent to the inputs value
+2. make the input tags value BLANK
+
+Soon to be added:
+1. Required Fields
+   If Submit is pressed and the field are ""
+      Those field will get a red fill color
+      You will focus on the first of the required fields
+   Else
+      It will submit normally
+2. When you type any character into the field it will go back to being transparent
+
+-->
+
+<!--------------------JavaScript on Top of HTML-------------------->
+
+<script>
+/*! modernizr 3.3.1 (Custom Build) | MIT *
+ * https://modernizr.com/download/?-placeholder-setclasses-cssclassprefix:mod_ !*/
+!function(e,n,a){function s(e,n){return typeof e===n}function o(){var e,n,a,o,t,i,c;for(var f in r)if(r.hasOwnProperty(f)){if(e=[],n=r[f],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(a=0;a<n.options.aliases.length;a++)e.push(n.options.aliases[a].toLowerCase());for(o=s(n.fn,"function")?n.fn():n.fn,t=0;t<e.length;t++)i=e[t],c=i.split("."),1===c.length?Modernizr[c[0]]=o:(!Modernizr[c[0]]||Modernizr[c[0]]instanceof Boolean||(Modernizr[c[0]]=new Boolean(Modernizr[c[0]])),Modernizr[c[0]][c[1]]=o),l.push((o?"":"no-")+c.join("-"))}}function t(e){var n=f.className,a=Modernizr._config.classPrefix||"";if(u&&(n=n.baseVal),Modernizr._config.enableJSClass){var s=new RegExp("(^|\\s)"+a+"no-js(\\s|$)");n=n.replace(s,"$1"+a+"js$2")}Modernizr._config.enableClasses&&(n+=" "+a+e.join(" "+a),u?f.className.baseVal=n:f.className=n)}function i(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):u?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}var l=[],r=[],c={_version:"3.3.1",_config:{classPrefix:"mod_",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var a=this;setTimeout(function(){n(a[e])},0)},addTest:function(e,n,a){r.push({name:e,fn:n,options:a})},addAsyncTest:function(e){r.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=c,Modernizr=new Modernizr;var f=n.documentElement,u="svg"===f.nodeName.toLowerCase();Modernizr.addTest("placeholder","placeholder"in i("input")&&"placeholder"in i("textarea")),o(),t(l),delete c.addTest,delete c.addAsyncTest;for(var p=0;p<Modernizr._q.length;p++)Modernizr._q[p]();e.Modernizr=Modernizr}(window,document);
+</script>
+
+<!---------------------CSS that goes ABOVE the Symfactic Form-------------------->
+
+<style type="text/css">
+
+/*----------MY CODE STARTS HERE----------*/
+
+/*HIDE the Simfatic Advertisement*/
+
+.sfm_cr_box{
+display:none;
+}
+
+.sfm_form_label{
+display: none;
+}
+
+/*have the outer div adjust to the content inside of it... and the div its in...*/
+
+#Boundary_Survey_Request_outer_div{
+background-color:red;
+width:98% !important;
+height:auto !important;
+
+margin:0 auto !important;
+top: 0 !important; left: 0 !important; bottom: 0 !important; right: 0 !important;
+background-color:transparent !important;
+z-index:1 !important;
+}
+
+#Boundary_Survey_Request_inner_div{
+z-index:2 !important;
+}
+
+/*adjust all MAIN sections*/
+
+#Boundary_Survey_Request_inner_div > div{
+position:static !important;
+height:auto !important;
+width:100% !important;
+top:0px !important; bottom:0px !important; left:0px !important; right0px !important;
+z-index:3 !important;
+}
+
+/*Height Exceptions for Extras...*/
+
+#Boundary_Survey_Request_inner_div > div > #upload_container{
+height: 200px !important;
+width: 98% !important;
+}
+
+#Boundary_Survey_Request_inner_div > div > #LegalDescription_container, 
+#Boundary_Survey_Request_inner_div > div > #Comments_container{
+height: 100px !important;
+margin-bottom: 10px !important;
+}
+
+#LegalDescription, #Comments{
+height:100% !important;
+width:100% !important;
+}
+
+/*adjust all containers*/
+
+#Boundary_Survey_Request_inner_div > div > div{
+position:static !important;
+padding-top:5px;
+padding-bottom:5px;
+top:0px !important; bottom:0px !important; left:0px !important; right0px !important;
+height:auto !important;
+width:100% !important;
+z-index:4 !important;
+
+text-align:center !important;
+}
+
+/*adjust all things INSIDE containers*/
+
+#Boundary_Survey_Request_inner_div > div > div > div:not(.sfm_auto_hide_text){
+position:static !important;
+top:0px !important; bottom:0px !important; left:0px !important; right0px !important;
+width:100% !important;
+z-index:5 !important;
+}
+
+/*make all horizontal line fill the divs they are in*/
+
+#Boundary_Survey_Request #horiz_line, #Boundary_Survey_Request #horiz_line1, #Boundary_Survey_Request #horiz_line3, #Boundary_Survey_Request #horiz_line4, #Boundary_Survey_Request #horiz_line5, #Boundary_Survey_Request #horiz_line6, #Boundary_Survey_Request #horiz_line7, #Boundary_Survey_Request #horiz_line8, #Boundary_Survey_Request #horiz_line9, #Boundary_Survey_Request #horiz_line10, #Boundary_Survey_Request #horiz_line11{
+position:static !important;
+width:100% !important;
+padding-bottom:0px !important;
+top:0px; bottom:0px; left:0px; right0px;
+z-index:5  !important;
+}
+
+/*Submit button settings*/
+
+#Submit{
+width:200px !important;
+text-align:center !important;
+font-size: 18px !important;
+background-color:black !important;
+color:white !important;
+border-color:grey !important;
+}
+
+#Submit_container{
+text-align:center !important;
+}
+
+/*adjust all input tags*/
+
+#Boundary_Survey_Request input, #Boundary_Survey_Request select, #Boundary_Survey_Request textarea{
+float: none !important;
+
+margin:0 auto !important;
+top: 0 !important; left: 0 !important; bottom: 0 !important; right: 0 !important;
+
+font-size: 16px !important; /*this is supposed to stop mobile phone autozooming*/
+}
+
+#Boundary_Survey_Request input:not(#Submit), #Boundary_Survey_Request select, #Boundary_Survey_Request textarea{
+width:98% !important;
+background-color:white !important;
+}
+
+#label1, #label2, #label3, #label4, #label5, #label6, #label7, #label8, #label9{
+text-align:center !important;
+}
+
+#Boundary_Survey_Request label{
+position:static !important;
+display: none;
+}
+
+#DateNeeded:before{
+content: "*Date Needed: ";
+}
+
+#ClosingDate:before{
+content: "Closing Date: ";
+}
+
+input[type="date"]:before {
+color: #000;
+margin-right: 0.5em;
+}
+
+input[type="date"]:focus:before, input[type="date"]:valid:before {
+content: "";
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #000;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #000;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #000;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #000;
+}
+</style>
+
+<!--------------------JavaScript on Bottom of HTML-------------------->
+
+<script>
+   //NOTE: the client wanted to be able to edit the form(from the Simfatic form UI) and then simply copy and paste the formatting that this code applies and that is why a great level of seemingly unecesary javascript is used
+
+   //set type of date for BOTH date Pickers----------
+
+   document.getElementById("DateNeeded").setAttribute("type","date");
+   document.getElementById("ClosingDate").setAttribute("type","date");
+
+
+   //turn off autocomplete for All Main Sections---------
+
+   var mainSections = document.getElementById("Boundary_Survey_Request_inner_div").getElementsByTagName("input");
+   var mainSectionsCount = mainSections.length;
+
+   for (i = 0; i < mainSectionsCount; i++) { 
+      mainSections[i].setAttribute("autocomplete","off");
+   }
+   
+   //turn on autocomplete for "First Section" and "Certifications"----------
+
+   //---(AKA) the div parent of div 'Name_container' AND the div parent of div 'NameOfBuyer_container'
+   //get "address" to those sections by (getting ONE of the inputs by ID -> getting name of its parents -> grabbing all that parents children -> out of those only grabbing inputs)
+
+   var section1 = document.getElementById("Name_container").parentNode.getElementsByTagName("input");
+   var section2 = document.getElementById("NameOfBuyer_container").parentNode.getElementsByTagName("input");
+
+   //actually modify values in section 1
+
+   var section1Count = section1.length;
+
+   for (i = 0; i < section1Count; i++) { 
+      section1[i].setAttribute("autocomplete","on");
+   }
+
+   //actually modify values in section 2
+
+   var section2Count = section2.length;
+
+   for (i = 0; i < section2Count; i++) { 
+      section2[i].setAttribute("autocomplete","on");
+   }
+
+//Modernizr helps us determine whether an attribute is supported in a browser... for this example we are checking if 'placeholder' attribute is supported
+Modernizr.on('placeholder', function( result ) {
+
+   //if 'placeholder' attribute IS NOT SUPPORTED (show labels - labels above input fields)
+  if (!result) {
+   
+      //(1) SET INPUT LABELS TO APPEAR (these labels will now be on top of their perspective input field)
+
+      var allLabelContainers = document.getElementsByClassName("sfm_form_label"); //these are actually the containers the labels are in
+
+      for (i = 0; i < allLabelContainers.length; i++) { 
+
+            allLabelContainers[i].style.display = "block";
+      }
+
+      var allLabels = document.getElementById("Boundary_Survey_Request_inner_div").getElementsByTagName("label"); //these are actually the lables themeselves
+
+      for( i=0; i < allLabels.length; i++){
+         allLabels[i].style.display = "block";
+      }
+
+      //(2) Now remove clear the value attribute for all the input fields (Simfatic forms adds these for reasons unknown)
+
+      //for inputs
+
+      var allInputs = document.getElementById("Boundary_Survey_Request_inner_div").getElementsByTagName("input");
+
+      var countOfInputs = allInputs.length;
+
+      for (i = 0; i < countOfInputs; i++) { 
+         if(allInputs[i].id != 'Submit')
+         {
+            //erase value
+            allInputs[i].setAttribute("value", "");
+         }
+      }
+
+      //for textareas
+
+      var allTextAreas = document.getElementById("Boundary_Survey_Request_inner_div").getElementsByTagName("textarea");
+
+      var countOfTextAreas = allTextAreas.length;
+
+      for (i = 0; i < countOfTextAreas; i++) { 
+         //erase currrent inner html
+         allTextAreas[i].innerHTML="";
+      }
+
+      alert("This Browser Doesn't Support PlaceHolders, The Form Will Look Strange");
+
+  } 
+  else //if the 'placeholder' attribute IS SUPPORTED (grab labels simfactic created and set them as the placeholder for the inputs fields)
+  {
+
+      //add placeholders and remove value from input(s)----------
+
+      var allInputs = document.getElementById("Boundary_Survey_Request_inner_div").getElementsByTagName("input");
+
+      var countOfInputs = allInputs.length;
+
+      for (i = 0; i < countOfInputs; i++) { 
+
+
+         if(allInputs[i].id != 'Submit')
+         {
+            //add place holder attribute
+            var placeholderValue = allInputs[i].getAttribute("value");
+
+            //set place holder attribut = to input value
+            allInputs[i].setAttribute("placeholder", placeholderValue);
+
+            //erase value
+            allInputs[i].setAttribute("value", "");
+         }
+      }
+
+      //set placeholder text for textArea(s)----------
+
+      var allTextAreas = document.getElementById("Boundary_Survey_Request_inner_div").getElementsByTagName("textarea");
+
+      var countOfTextAreas = allTextAreas.length;
+
+      for (i = 0; i < countOfTextAreas; i++) { 
+
+         //save innerHTML
+         var placeHolderValue = allTextAreas[i].innerHTML;
+
+         //erase currrent inner html
+         allTextAreas[i].innerHTML="";
+
+         //set placeholder text
+         allTextAreas[i].setAttribute("placeholder",placeHolderValue);
+      }
+  }
+});
+
+</script>
