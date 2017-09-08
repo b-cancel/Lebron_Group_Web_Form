@@ -1,0 +1,39 @@
+ORDERED BY ----- %Name%
+
+EMAIL ----- %Email%
+
+PHONE ----- %Phone%
+
+NAME OF TITLE COMPANY ----- %NameOfTitleCompany%
+
+ADDRESS OF TITLE COMPANY ----- %AddressOfTitleCompany%
+
+ADDRESS OF PROPERTY ----- %Address%
+
+CITY OF PROPERTY ----- %City%
+
+PARCEL ID ----- %ParcelID%
+
+ACCESS CODE ----- %AccessCode%
+
+LEGAL DESCRIPTION ----- %LegalDescription%
+
+LISTING AGENT ----- %ListingAgent%
+
+DATE NEEDED ----- %DateNeeded%
+
+CLOSING DATE ----- %ClosingDate%
+
+-------CERTIFY TO-------
+
+BUYER ----- %NameOfBuyer%
+
+LENDER ----- %NameOfLender%
+
+TITLE COMPANY ----- %NameOfTitleAtty%
+
+UNDERWRITER ----- %NameOfUnderWriter%
+
+-------OTHER-------
+
+COMMENTS ----- %Comments%

@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml'>
+   <head >
+      <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+      <title >Form Page: Boundary_Survey_Request</title>
+      <meta name='generator' content='Simfatic Forms 4.0.12.416'/>
+      <script src='scripts/jquery-1.7.2.min.js' type='text/javascript'></script>
+      <script src='scripts/jquery.sim.utils.js' type='text/javascript'></script>
+      <script src='scripts/globalize.js' type='text/javascript'></script>
+      <script src='scripts/jquery.sim.FormCalc.js' type='text/javascript'></script>
+      <link rel='stylesheet' type='text/css' href='style/Boundary_Survey_Request.css?r=%sfm_css_rand%'/>
+   </head>
+   <body id='sfm_Boundary_Survey_Request_body'>
+      <form id='Boundary_Survey_Request' class='sfm_form' enctype='multipart/form-data' method='post' action='%sfm_self_script%' accept-charset='UTF-8'>
+         <div id='Boundary_Survey_Request_errorloc' class='error_strings' style='width:320px;text-align:left'>%sfm_error_display_loc%</div>
+         <div id='Boundary_Survey_Request_outer_div' class='form_outer_div' style='width:320px;height:2865px'>
+            <div style='position:relative' id='Boundary_Survey_Request_inner_div'>
+               <input type='hidden' name='sfm_form_submitted' value='yes'/>
+               <div id='formsection_0_0'>
+                  <div id='label9_container'>
+                     <div id='label9'>ONLY fields with * are Required</div>
+                  </div>
+                  <div id='horiz_line7'></div>
+               </div>
+               <div id='formsection_0_152'>
+                  <div id='label26_container' class='sfm_form_label'>
+                     <label id='label26' for='Name'>*Your Name</label>
+                  </div>
+                  <div id='Name_container'>
+                     <input type='text' name='Name' id='Name' value='%Name%' size='20' class='sfm_textbox'/>
+                  </div>
+                  <div id='label7_container'>
+                     <div id='label7'>The Survey will be made in Your Name unless otherwise specified</div>
+                  </div>
+                  <div id='label25_container' class='sfm_form_label'>
+                     <label id='label25' for='Email'>*Your Email</label>
+                  </div>
+                  <div id='Email_container'>
+                     <input type='text' name='Email' id='Email' value='%Email%' size='20' class='sfm_textbox'/>
+                  </div>
+                  <div id='label24_container' class='sfm_form_label'>
+                     <label id='label24' for='Phone'>Your Phone #</label>
+                  </div>
+                  <div id='Phone_container'>
+                     <input type='text' name='Phone' id='Phone' value='%Phone%' size='20' class='sfm_textbox'/>
+                  </div>
+                  <div id='label23_container' class='sfm_form_label'>
+                     <label id='label23' for='NameOfTitleCompany'>*Name of Title Company</label>
+                  </div>
+                  <div id='NameOfTitleCompany_container'>
+                     <input type='text' name='NameOfTitleCompany' id='NameOfTitleCompany' value='%NameOfTitleCompany%' size='20' class='sfm_textbox'/>
+                  </div>
+                  <div id='label22_container' class='sfm_form_label'>
+                     <label id='label22' for='AddressOfTitleCompany'>*Address of Title Company</label>
+                  </div>
+                  <div id='AddressOfTitleCompany_container'>
+                     <input type='text' name='AddressOfTitleCompany' id='AddressOfTitleCompany' value='%AddressOfTitleCompany%' size='20' class='sfm_textbox'/>
+                  </div>
+               </div>
+               <div id='formsection_0_568'>
+                  <div id='horiz_line9'></div>
+                  <div id='label5_container'>
+                     <div id='label5'>Provide the Address of the Property to be Surveyed</div>
+                  </div>
+                  <div id='label18_container' class='sfm_form_label'>
+                     <label id='label18' for='Address'>*Address</label>
+                  </div>
+                  <div id='Address_container'>
+                     <input type='text' name='Address' id='Address' value='%Address%' size='20' class='sfm_textbox'/>
+                  </div>
+                  <div id='label17_container' class='sfm_form_label'>
+                     <label id='label17' for='City'>City | State | Zip</label>
+                  </div>
+                  <div id='City_container'>
+                     <input type='text' name='City' id='City' value='%City%' size='20' class='sfm_textbox'/>
+                  </div>
+                  <div id='label16_container' class='sfm_form_label'>
+                     <label id='label16' for='ParcelID'>Parcel ID (required if house number is N/A)</label>
+                  </div>
+                  <div id='ParcelID_container'>
+                     <input type='text' name='ParcelID' id='ParcelID' value='%ParcelID%' size='20' class='sfm_textbox'/>
+                  </div>
+                  <div id='label15_container' class='sfm_form_label'>
+                     <label id='label15' for='AccessCode'>Access Code For The Property</label>
+                  </div>
+                  <div id='AccessCode_container'>
+                     <input type='text' name='AccessCode' id='AccessCode' value='%AccessCode%' size='20' class='sfm_textbox'/>
+                  </div>
+                  <div id='label19_container' class='sfm_form_label'>
+                     <label id='label19' for='LegalDescription'>Legal Description</label>
+                  </div>
+                  <div id='LegalDescription_container'><textarea name='LegalDescription' id='LegalDescription' class='sfm_textarea'>%LegalDescription%</textarea></div>
+                  <div id='label20_container' class='sfm_form_label'>
+                     <label id='label20' for='ListingAgent'>Listing Agent: &quot;Contact Info.&quot;</label>
+                  </div>
+                  <div id='ListingAgent_container'>
+                     <input type='text' name='ListingAgent' id='ListingAgent' value='%ListingAgent%' size='20' class='sfm_textbox'/>
+                  </div>
+                  <div id='horiz_line6'></div>
+               </div>
+               <div id='formsection_0_1750'></div>
+               <div id='formsection_0_1752'>
+                  <div id='label14_container' class='sfm_form_label'>
+                     <label id='label14' for='DateNeeded'>*Date Needed</label>
+                  </div>
+                  <div id='DateNeeded_container'>
+                     <input type='text' name='DateNeeded' id='DateNeeded' value='%DateNeeded%' size='20' class='sfm_textbox'/>
+                  </div>
+                  <div id='label13_container' class='sfm_form_label'>
+                     <label id='label13' for='ClosingDate'>Closing Date</label>
+                  </div>
+                  <div id='ClosingDate_container'>
+                     <input type='text' name='ClosingDate' id='ClosingDate' value='%ClosingDate%' size='20' class='sfm_textbox'/>
+                  </div>
+                  <div id='horiz_line5'></div>
+               </div>
+               <div id='formsection_0_1896'>
+                  <div id='label2_container'>
+                     <div id='label2'>The Certifications EXACTLY as Desired on the Survey</div>
+                  </div>
+                  <div id='label_container' class='sfm_form_label'>
+                     <label id='label' for='NameOfBuyer'>Buyer(s)</label>
+                  </div>
+                  <div id='NameOfBuyer_container'>
+                     <input type='text' name='NameOfBuyer' id='NameOfBuyer' value='%NameOfBuyer%' size='20' class='sfm_textbox'/>
+                  </div>
+                  <div id='label10_container' class='sfm_form_label'>
+                     <label id='label10' for='NameOfLender'>Lender</label>
+                  </div>
+                  <div id='NameOfLender_container'>
+                     <input type='text' name='NameOfLender' id='NameOfLender' value='%NameOfLender%' size='20' class='sfm_textbox'/>
+                  </div>
+                  <div id='label11_container' class='sfm_form_label'>
+                     <label id='label11' for='NameOfTitleCompany'>Title Co./Attorney</label>
+                  </div>
+                  <div id='NameOfTitleAtty_container'>
+                     <input type='text' name='NameOfTitleAtty' id='NameOfTitleAtty' value='%NameOfTitleAtty%' size='20' class='sfm_textbox'/>
+                  </div>
+                  <div id='label12_container' class='sfm_form_label'>
+                     <label id='label12' for='NameOfUnderWriter'>Title Insurance/Underwriter</label>
+                  </div>
+                  <div id='NameOfUnderWriter_container'>
+                     <input type='text' name='NameOfUnderWriter' id='NameOfUnderWriter' value='%NameOfUnderWriter%' size='20' class='sfm_textbox'/>
+                  </div>
+                  <div id='horiz_line4'></div>
+               </div>
+               <div id='formsection_0_2232'>
+                  <div id='AddExtras_container'>
+                     <select name='AddExtras' id='AddExtras' size='1'>
+                        <option value='selected' %04657ea0e7eacf79f993665df4e075d4%>Add Extras?</option>
+                        <option value='Question or Comments' %84ad3526f33c9502894d9d7ca5f405e6%>Question or Comments</option>
+                        <option value='Attachments' %bba901f36ce0b36700525d7615535c40%>Attachments</option>
+                     </select>
+                  </div>
+               </div>
+               <div id='formsection_0_2280'></div>
+               <div id='formsection_0_2281'>
+                  <div id='Comments_container'><textarea name='Comments' id='Comments' cols='50' rows='8' class='sfm_textarea'>%Comments%</textarea></div>
+               </div>
+               <div id='formsection_0_2424'>
+                  <div id='FileUpload_container'>
+                     <input type='file' name='FileUpload' id='FileUpload'/>
+                  </div>
+               </div>
+               <div id='formsection_0_2480'>
+                  <div id='horiz_line8'></div>
+                  <div id='label4_container'>
+                     <div id='label4'>Any return visit(s) to the property due to access Issues will incur in an Additional $50.00 Charge</div>
+                  </div>
+                  <div id='label8_container'>
+                     <div id='label8'>Every order submitted After 3:00 pm will be processed the Following Business Day</div>
+                  </div>
+                  <div id='label1_container'>
+                     <div id='label1'>You will be sent a Confirmation Email at the End of the Day.<br />If you Do Not receive it please Call our office</div>
+                  </div>
+                  <div id='Submit_container' class='loading_div'>
+                     <input type='submit' name='Submit' value='Submit' id='Submit'/>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </form>
+      <script type='text/javascript'>
+// <![CDATA[
+$(function()
+{
+   sfm_show_loading_on_formsubmit('Boundary_Survey_Request','Submit');
+});
+$('#formsection_0_2281').dispCondition('is_selected(AddExtras,"Question or Comments")','Boundary_Survey_Request');
+$('#formsection_0_2424').dispCondition('is_selected(AddExtras,"Attachments")','Boundary_Survey_Request');
+
+// ]]>
+      </script>
+   </body>
+</html>
