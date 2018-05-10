@@ -5358,7 +5358,7 @@ includes
 TemplatesFolder:1
 templ
 OutputFolder:1
-C:\Users\bryan\AppData\Roaming\SimfaticForms\MyForms\Boundary_Survey_Request\code
+D:\GitHub\Lebron_Group_Web_Form
 SeperateTemplateFiles:1
 TemplFileExtension:1
 txt
@@ -5385,7 +5385,7 @@ Password:0
 AdminPageStatus:1
 }
 }
-UploadMethod:1
+UploadMethod:2
 SimpleDBEnabled:0
 InstalledMasterScriptVersion:2
 FullFormCodeCopied:0
